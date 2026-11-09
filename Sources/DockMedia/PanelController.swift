@@ -193,6 +193,7 @@ final class PanelController: NSObject, NSMenuDelegate {
         }
 
         if want {
+            requestScreenRecordingOnce()
             let installed = DockSlot.isInstalled
             slotPresent = installed
             guard !installed else { return }
@@ -204,6 +205,16 @@ final class PanelController: NSObject, NSMenuDelegate {
             guard present else { DockSlot.confirmRemoved(); return }
             changeSlot(install: false)
         }
+    }
+
+    /// Asks for Screen Recording (glass tone, covered Dock restarts) the first time there's a
+    /// player to show, once Accessibility is sorted, rather than stacking prompts at launch.
+    /// Only ever asks once; declining just leaves the fallbacks in place.
+    private func requestScreenRecordingOnce() {
+        let key = "didRequestScreenRecording"
+        guard !UserDefaults.standard.bool(forKey: key) else { return }
+        UserDefaults.standard.set(true, forKey: key)
+        if !CGPreflightScreenCaptureAccess() { _ = CGRequestScreenCaptureAccess() }
     }
 
     private func changeSlot(install: Bool) {

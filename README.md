@@ -34,13 +34,14 @@ off from the player's right-click menu.
 | Permission | Needed for | Without it |
 | --- | --- | --- |
 | Accessibility (required, prompted on first launch) | Finding the player's slot in the Dock | The player can't appear |
-| Screen Recording (optional, add DockMedia manually in System Settings) | Matching text tone to the glass; hiding Dock restarts behind a snapshot | Text follows the system appearance; Dock restarts are visible |
+| Screen Recording (optional, prompted once when the player first appears; takes effect after reopening DockMedia) | Matching text tone to the glass; hiding Dock restarts behind a snapshot | Text follows the system appearance; Dock restarts are visible |
 | Automation for Spotify (optional, prompted once) | Reading the Spotify track ID for the **E** marker | Falls back to the iTunes lookup |
 
 ## Privacy
 
 There are no accounts, analytics or telemetry. The only network requests look up the
-**E** marker: for Spotify, the public embed page of the current track; for other
+**E** marker: for Spotify, the public embed page of the current track (fetched with a
+browser User-Agent); for other
 sources, the iTunes Search API with the track title and artist. Screen Recording is only
 used on the Dock's own area, and images are never saved or sent anywhere.
 
