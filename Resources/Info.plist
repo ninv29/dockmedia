@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key><string>en</string>
+	<key>CFBundleExecutable</key><string>DockMedia</string>
+	<key>CFBundleIdentifier</key><string>local.dockmedia.DockMedia</string>
+	<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+	<key>CFBundleName</key><string>DockMedia</string>
+	<key>CFBundleDisplayName</key><string>DockMedia</string>
+	<key>CFBundlePackageType</key><string>APPL</string>
+	<key>CFBundleShortVersionString</key><string>1.0</string>
+	<key>CFBundleVersion</key><string>1</string>
+	<key>CFBundleIconFile</key><string>AppIcon</string>
+	<key>LSMinimumSystemVersion</key><string>26.0</string>
+	<key>LSUIElement</key><true/>
+	<key>LSApplicationCategoryType</key><string>public.app-category.music</string>
+	<key>NSHighResolutionCapable</key><true/>
+	<key>NSAppleEventsUsageDescription</key><string>DockMedia asks Spotify which track is playing so it can show the explicit (E) marker.</string>
+</dict>
+</plist>
